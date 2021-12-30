@@ -299,14 +299,14 @@ defaults write com.apple.dock autohide -bool true
 defaults write com.apple.dock autohide-time-modifier -float 0; killall Dock
 
 # Identity tool onstalation (CR)
-wget https://info.eidentita.cz/Download/eObcanka.dmg
-DMG=$(find *.dmg)
-sudo hdiutil attach $DMG
-PKG=$(find /Volumes -name '*.pkg')
-sudo installer -package $PKG -target /
-DET="$(cut -d'/' -f3 <<<"$PKG")"
-sudo hdiutil detach /Volumes/$DET
-rm $DMG
+#wget https://info.eidentita.cz/Download/eObcanka.dmg
+#DMG=$(find *.dmg)
+#sudo hdiutil attach $DMG
+#PKG=$(find /Volumes -name '*.pkg')
+#sudo installer -package $PKG -target /
+#DET="$(cut -d'/' -f3 <<<"$PKG")"
+#sudo hdiutil detach /Volumes/$DET
+#rm $DMG
 
 # Name resolution config (home)
 while read p; do
