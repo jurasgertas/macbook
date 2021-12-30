@@ -1,7 +1,7 @@
 #!/bin/bash
-# taken from Roman / Roklseky
 # https://formulae.brew.sh/cask/
 # https://github.com/mathiasbynens/dotfiles/blob/master/.macos
+# add proper rights to run
 # chmod a+x macinstall.sh
 
 # Ask for the administrator password upfront
