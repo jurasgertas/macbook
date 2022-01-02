@@ -24,27 +24,17 @@ brew install --cask xcodes
 brew install glances
 brew install cask
 
-# PKG python
-wget https://www.python.org/ftp/python/3.10.0/python-3.10.0-macos11.pkg
-PKG=$(find *.pkg)
-sudo installer -package $PKG -target /
-rm $PKG
-
 # Dev
-# brew install --cask docker
-# brew install --cask rancher
-# brew install helm
-# echo 'alias docker=nerdctl' | sudo tee -a ~/.zshrc
-# echo 'alias docker=nerdctl' | sudo tee -a ~/.bash_profile
-brew install --cask visual-studio-code
+#brew install --cask visual-studio-code
 brew install --cask pycharm-ce
 brew install --cask iterm2
-brew install ruby
-export SDKROOT=$(xcrun --show-sdk-path)
-echo 'export PATH="/usr/local/opt/ruby/bin:/usr/local/lib/ruby/gems/3.0.0/bin:$PATH"' | sudo tee -a ~/.zshrc
-echo 'export PATH="/usr/local/opt/ruby/bin:/usr/local/lib/ruby/gems/3.0.0/bin:$PATH"' | sudo tee -a ~/.bash_profile
-echo 'export PATH="$HOME/.gem/ruby/3.0.0/bin:$PATH"' | sudo tee -a ~/.zshrc
-echo 'export PATH="$HOME/.gem/ruby/3.0.0/bin:$PATH"' | sudo tee -a ~/.bash_profile
+#brew install ruby
+
+#export SDKROOT=$(xcrun --show-sdk-path)
+#echo 'export PATH="/usr/local/opt/ruby/bin:/usr/local/lib/ruby/gems/3.0.0/bin:$PATH"' | sudo tee -a ~/.zshrc
+#echo 'export PATH="/usr/local/opt/ruby/bin:/usr/local/lib/ruby/gems/3.0.0/bin:$PATH"' | sudo tee -a ~/.bash_profile
+#echo 'export PATH="$HOME/.gem/ruby/3.0.0/bin:$PATH"' | sudo tee -a ~/.zshrc
+#echo 'export PATH="$HOME/.gem/ruby/3.0.0/bin:$PATH"' | sudo tee -a ~/.bash_profile
 
 # Make folders collored in shell
 echo 'export CLICOLOR=1' | sudo tee -a ~/.zshrc
@@ -54,57 +44,33 @@ echo 'export CLICOLOR=1' | sudo tee -a ~/.bash_profile
 echo 'export LSCOLORS=ExFxBxDxCxegedabagacad' | sudo tee -a ~/.bash_profile
 echo 'alias ls='ls -GFh'' | sudo tee -a ~/.bash_profile
 
-# DMG flasher
-# git clone https://github.com/marcelstoer/nodemcu-pyflasher.git
-GITHUB_URL=https://github.com/marcelstoer/nodemcu-pyflasher/releases
-VERSION_PY_FLASHER=$(curl -w '%{url_effective}' -I -L -s -S ${GITHUB_URL}/latest -o /dev/null | sed -e 's|.*/||')
-wget https://github.com/marcelstoer/nodemcu-pyflasher/releases/download/${VERSION_PY_FLASHER}/NodeMCU-PyFlasher.dmg
-DMG=$(find *.dmg)
-sudo hdiutil attach $DMG
-APP=$(find /Volumes -name '*.app')
-sudo cp -R "$APP" /Applications
-DET="$(cut -d'/' -f3 <<<"$APP")"
-sudo hdiutil detach "/Volumes/$DET"
-rm $DMG
-
-# TAR ESP Flasher
-wget https://github.com/Jason2866/ESP_Flasher/releases/download/v.1.3/ESP-Flasher_macOS.zip
-unzip -a ESP-Flasher_macOS.zip
-rm ESP-Flasher_macOS.zip
-# tar -xvf dist.tar
-
-# ZIP Arduino
-#LAST=$(curl https://arduino-cli.github.io/arduino-version/list | grep -oE "[^,]+$")
-#wget https://downloads.arduino.cc/arduino-$LAST-macosx.zip
-#unzip -a arduino-$LAST-macosx.zip
-#sudo mv Arduino.app /Applications/Arduino.app
-#rm arduino-$LAST-macosx.zip
-
 # Tools
-brew install --cask trezor-suite
+#brew install --cask trezor-suite
+#calendar bar
 brew install --cask itsycal
+#pass manager
 brew install --cask enpass
 brew install --cask tuxera-ntfs
 brew install --cask firefox
+#flash to sd cards
 brew install --cask balenaetcher
+#add to safari
 brew install --cask hush
 brew install --cask drawio
+#key shortcats
 brew install --cask cheatsheet
+#hotkeys
 brew install --cask alfred
 brew install --cask mathpix-snipping-tool
+#editor
 brew install --cask sublime-text
 brew install --cask onlyoffice
 brew install --cask sensei
-brew install azure-cli
-brew install awscli
+#brew install azure-cli
+#brew install awscli
 brew install pwgen
-# brew install --cask google-cloud-sdk
-# https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-365.0.1-darwin-x86_64.tar.gz
-# echo 'source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.bash.inc"' | sudo tee -a ~/.zshrc
-# echo 'source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"' | sudo tee -a ~/.bash_profile
 
 # Transfer (SFTP,SSH...)
-brew install wget
 brew install telnet
 brew install nmap
 brew install tree
@@ -130,7 +96,7 @@ cd
 git clone https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
 
 # Media
-brew install --cask kodi
+#brew install --cask kodi
 brew install --cask vlc
 brew install --cask airflow
 
@@ -145,12 +111,6 @@ rm $PKG
 
 # Printer Xerox 3025
 #wget https://www.support.xerox.com/en-us/product/workcentre-3025/downloads?language=en&platform=macosx107#
-
-# Filezilla
-#wget https://download.filezilla-project.org/client/FileZilla_3.55.1_macosx-x86.app.tar.bz2
-#tar -xvf FileZilla_3.55.1_macosx-x86.app.tar.bz2
-#sudo mv FileZilla.app /Applications/FileZilla.app
-#rm FileZilla_3.55.1_macosx-x86.app.tar.bz2
 
 # change dockutil on the desktop
 brew install dockutil
@@ -176,9 +136,6 @@ dockutil --add /Applications/Enpass.app
 dockutil --add '/Applications/Sublime Text.app'
 dockutil --add '/Applications/Cyberduck.app'
 
-#gem install bundler jekyll
-#bundle add webrick
-
 echo "$(tput setaf 1)$(tput setab 7) \
 Type your hostname (rmbp): \
 $(tput sgr 0)"
@@ -186,8 +143,6 @@ read compname
 sudo scutil --set ComputerName $compname
 sudo scutil --set LocalHostName $compname
 sudo scutil --set HostName $compname
-
-
 
 # Sign-in to appstore https://github.com/mas-cli/mas
 echo "$(tput setaf 1)$(tput setab 7) \
@@ -201,12 +156,6 @@ read
 # read appleID
 # mas signin $appleID
 # Graphical sign in "mas signin --dialog mas@example.com"
-
-# install numbers via mas
-#mas install 409203825
-
-# install cryptowatch via mas
-#mas install 1527457231
 
 # Trackpad: enable tap to click for this user and for the login screen
 defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
@@ -297,16 +246,6 @@ defaults write com.apple.dock mouse-over-hilite-stack -bool true
 defaults write com.apple.dock autohide -bool true
 # Hide & Show it fast
 defaults write com.apple.dock autohide-time-modifier -float 0; killall Dock
-
-# Identity tool onstalation (CR)
-#wget https://info.eidentita.cz/Download/eObcanka.dmg
-#DMG=$(find *.dmg)
-#sudo hdiutil attach $DMG
-#PKG=$(find /Volumes -name '*.pkg')
-#sudo installer -package $PKG -target /
-#DET="$(cut -d'/' -f3 <<<"$PKG")"
-#sudo hdiutil detach /Volumes/$DET
-#rm $DMG
 
 # Name resolution config (home)
 while read p; do
