@@ -109,10 +109,6 @@ PKG=$(find *.pkg)
 sudo installer -package $PKG -target /
 rm $PKG
 
-# Printer Xerox 3025
-#wget https://www.support.xerox.com/en-us/product/workcentre-3025/downloads?language=en&platform=macosx107#
-
-# change dockutil on the desktop
 brew install dockutil
 dockutil --remove 'Contacts'
 dockutil --remove 'Maps'
@@ -128,7 +124,7 @@ dockutil --remove 'Siri'
 dockutil --add /Applications/Termius.app
 dockutil --add /Applications/iTerm.app
 dockutil --add '/Applications/PyCharm CE.app'
-dockutil --add '/Applications/Visual Studio Code.app'
+#dockutil --add '/Applications/Visual Studio Code.app'
 dockutil --add /Applications/Anaconda-Navigator.app
 #dockutil --add '/Applications/Rancher Desktop.app'
 #dockutil --add /Applications/VirtualBox.app
