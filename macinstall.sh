@@ -116,18 +116,13 @@ dockutil --remove 'FaceTime'
 dockutil --remove 'Reminders'
 dockutil --remove 'TV'
 dockutil --remove 'Music'
-dockutil --remove 'News'
-dockutil --remove 'Stocks'
-dockutil --remove 'Launchpad'
+#dockutil --remove 'Launchpad'
 dockutil --remove 'Podcasts'
-dockutil --remove 'Siri'
 dockutil --add /Applications/Termius.app
 dockutil --add /Applications/iTerm.app
 dockutil --add '/Applications/PyCharm CE.app'
 #dockutil --add '/Applications/Visual Studio Code.app'
 dockutil --add /Applications/Anaconda-Navigator.app
-#dockutil --add '/Applications/Rancher Desktop.app'
-#dockutil --add /Applications/VirtualBox.app
 dockutil --add /Applications/Enpass.app
 dockutil --add '/Applications/Sublime Text.app'
 dockutil --add '/Applications/Cyberduck.app'
