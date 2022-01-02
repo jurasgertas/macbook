@@ -28,7 +28,7 @@ brew install cask
 #brew install --cask visual-studio-code
 brew install --cask pycharm-ce
 brew install --cask iterm2
-#brew install ruby
+brew install ruby
 
 #export SDKROOT=$(xcrun --show-sdk-path)
 #echo 'export PATH="/usr/local/opt/ruby/bin:/usr/local/lib/ruby/gems/3.0.0/bin:$PATH"' | sudo tee -a ~/.zshrc
