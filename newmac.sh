@@ -50,13 +50,11 @@ CASKS=(
     hush
     cheatsheet
     spotify
-    alfred
     onlyoffice
     mathpix-snipping-tool
     sensei
     sublime-text
     vlc
-    tunnelblick
     cyberduck
     teamviewer
     termius
