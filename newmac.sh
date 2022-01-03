@@ -29,6 +29,7 @@ PACKAGES=(
     teamviewer
     xclip
     dockutil
+    pwgen
 )
 
 echo "Installing packages..."
@@ -53,7 +54,6 @@ CASKS=(
     onlyoffice
     mathpix-snipping-tool
     sensei
-    pwgen
     sublime-text
     vlc
     tunnelblick
