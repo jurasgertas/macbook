@@ -42,7 +42,7 @@ brew cleanup
 CASKS=(
     itsycal
     iterm2
-    enpass
+    MacPass
     tuxera-ntfs
     firefox
     balenaetcher
@@ -86,7 +86,7 @@ dockutil --remove 'Music'
 dockutil --remove 'Podcasts'
 dockutil --add /Applications/Termius.app
 dockutil --add /Applications/iTerm.app
-dockutil --add /Applications/Enpass.app
+dockutil --add /Applications/MacPass.app
 dockutil --add '/Applications/Sublime Text.app'
 dockutil --add '/Applications/Cyberduck.app'
 dockutil --add '/Applications/Spotify.app'
