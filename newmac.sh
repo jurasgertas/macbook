@@ -27,16 +27,12 @@ PACKAGES=(
     duck
     cyberduck
     teamviewer
-    termius
     xclip
     dockutil
 )
 
 echo "Installing packages..."
 brew install ${PACKAGES[@]}
-
-echo "link termius"
-brew link termius
 
 echo "Cleaning up..."
 brew cleanup
@@ -70,6 +66,9 @@ CASKS=(
 
 echo "Installing cask apps..."
 brew install --cask ${CASKS[@]}
+
+echo "link termius"
+brew link termius
 
 echo "installing anaconda"
 wget https://repo.anaconda.com/archive/Anaconda3-2021.05-MacOSX-x86_64.pkg
