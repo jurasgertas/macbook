@@ -65,9 +65,6 @@ CASKS=(
 echo "Installing cask apps..."
 brew install --cask ${CASKS[@]}
 
-echo "link termius"
-brew link termius
-
 echo "mac configuration"
 echo "configuring colours in shell"
 
@@ -104,12 +101,6 @@ read compname
 sudo scutil --set ComputerName $compname
 sudo scutil --set LocalHostName $compname
 sudo scutil --set HostName $compname
-
-echo "sign into appstore"
-
-echo "$(tput setaf 1)$(tput setab 7) \
-Login to app store. Press Enter when done: \
-$(tput sgr 0)"
 
 #Trackpad: enable tap to click for this user and for the login screen
 defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
