@@ -70,12 +70,6 @@ brew install --cask ${CASKS[@]}
 echo "link termius"
 brew link termius
 
-echo "installing anaconda"
-wget https://repo.anaconda.com/archive/Anaconda3-2021.05-MacOSX-x86_64.pkg
-PKG=$(find *.pkg)
-sudo installer -package $PKG -target /
-rm $PKG
-
 echo "mac configuration"
 echo "configuring colours in shell"
 
