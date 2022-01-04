@@ -1,6 +1,9 @@
 #!/usr/bin/env bash
-# 
-
+########################################################################### 
+# simple bash script for automatic installation of used apps on the new mac
+###########################################################################
+# do not forget to give proper rights (chmod a+x newmac.sh)
+###########################################################################
 echo "Starting"
 
 # Check for Homebrew, install if we don't have it
@@ -193,5 +196,5 @@ defaults write com.apple.dock mouse-over-hilite-stack -bool true
 defaults write com.apple.dock autohide -bool true
 # Hide & Show it fast
 defaults write com.apple.dock autohide-time-modifier -float 0; killall Dock
-
+echo.
 echo "complete, please reboot"
